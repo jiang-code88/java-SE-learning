@@ -41,7 +41,7 @@ public class AnnotationDemo {
  * 2 注解的特殊属性
  *  - 如果注解只有一个名为 value 的属性时，
  *    使用注解指定 value 属性值时，可以不写 value=。
- *  - 如果注解有多个属性，且有属性没有设置默认值，则 value= 不可省略。
+ *  - 如果注解有多个属性，且除 value 属性外，有属性没有设置默认值，则 value= 不可省略。
  */
 @interface AnnotationValue{
     String value();

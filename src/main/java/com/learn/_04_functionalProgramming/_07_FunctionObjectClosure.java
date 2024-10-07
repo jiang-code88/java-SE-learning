@@ -9,6 +9,9 @@ import java.util.function.Function;
  * 函数式编程的「闭包」
  *  - 函数对象使用函数外部的变量数据就是闭包。
  *
+ * 闭包的作用：
+ *  - 给函数对象提供除参数以外其他的数据。
+ *
  * 闭包的限制：
  *  - 闭包所使用的变量必须是 final 或 effective final，
  *    目的是为了保证函数的不变性，不会出现输入相同，但函数执行结果不同的情况。
@@ -17,9 +20,6 @@ import java.util.function.Function;
  *  - 但是 effective final 的检查不严格，
  *    很多情况我们可以通过改变函数对象引用的外部变量值，进而控制函数对象的执行结果。
  *    如：对类/成员变量值进行修改、对引用类型变量中的成员变量值进行修改。
- *
- * 闭包的作用：
- *  - 给函数对象提供除参数以外其他的数据。
  */
 public class _07_FunctionObjectClosure {
     private static int a = 6;

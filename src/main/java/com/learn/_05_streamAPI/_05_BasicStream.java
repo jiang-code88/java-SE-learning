@@ -10,7 +10,7 @@ import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 /**
- * Stream 的基本流（基本数据类型流）
+ * Stream 的基本流（基本数据类型元素的流）
  *  - intStream
  *  - doubleStream
  *  - LongStream
