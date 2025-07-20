@@ -16,7 +16,7 @@ import java.util.Arrays;
  *   - 方法重写约束：@Override（编译器会校验带有该标记的方法，是否在其父类中存在，保证方法重写的合理和存在）
  *   - 函数式接口约束（约束接口类只能声明一个方法）：@FunctionalInterface（编译器会校验接口类，保证只存在一个方法）
  */
-@AnnotationProperties(id = 100, name = "abc", information = {"a", "b"}) // 使用 {} 赋值数组类型的注解属性
+@AnnotationProperties(id = 100, name = "abc", information = {"a", "b"}) // 使用 {} 赋值数组类型的注解属性，如果数组只有一个元素 {} 可以省略不写。
 @AnnotationValue("aaa")
 public class AnnotationDemo {
 }
@@ -34,6 +34,7 @@ public class AnnotationDemo {
     String name();
     String addr() default "aaa";
     String[] information();
+    String[] rows() default {}; // 指定数组类型属性名的默认值为空数组
 }
 
 /**
